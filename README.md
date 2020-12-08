@@ -1,3 +1,2 @@
-# CALC
-Kalkulator for oppgaver lignende oblig12 oppgave4
-programmet kan endres for forskjellige tall i oppgaven.
+# kalkulator for kjapp løsning oppgaver lignende oblig 12 oppgave 4
+Programmet kan endres for forskjellige variasjoner i oppgaven.
