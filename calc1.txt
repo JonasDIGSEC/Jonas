@@ -9,43 +9,52 @@
 
 #include <stdio.h>
 
+const int MAXTALL   = 1000; // Max tall som skal sjekkes
+const int MINTALL   = 1;    // min tall som skal sjekkes
+const int MENGDEA   = 3;    // her kan du endre for andre oppgaver mengde A
+const int MENGDEB   = 7;    // her kan du endre for andre oppgaver mengde B
+                            // mengde C kan også legges til om ønskelig
+
 /**
 *   Hovedprogram
 */
 
 int main () {
 
-int tallA = 0;
-int tallB = 0;
-int tall  = 0;
-int tall2 = 0;
-int AUB   = 0;
+int tallA = 0;      // mengde A
+int tallB = 0;      // mengde B
+int tall  = 0;      // buffer for A når A U B regnes ut
+int tall2 = 0;      // buffer for B når A U B regnes ut
+int AUB   = 0;      // sum for A union B
 
-for (int n = 1000; n > 0; n--){
-        if (n % 3 ==0) {
+                    // utregning for mengde A
+    for (int n = MAXTALL; n >= MINTALL; n--){
+        if (n % MENGDEA ==0) {
          tallA++;
     }
 }
 
-for (int j = 1000; j > 0; j--){
-        if (j % 7 ==0) {
+                    // utregning for mengde B
+    for (int j = MAXTALL; j >= MINTALL; j--){
+        if (j % MENGDEB ==0) {
          tallB++;
     }
 }
 
-for (int i = 1000; i > 0; i--){
-        if (i % 3 ==0) {
+                    // utregning for A union B
+    for (int i = MAXTALL; i >= MINTALL; i--){
+        if (i % MENGDEA ==0) {
          tall++;
     }
-         else if (i % 7 ==0) {
+         else if (i % MENGDEB ==0) {
             tall2++;
     }
 }
 
-printf("\nSvar mengde   A   = %i",tallA);
-printf("\nSvar mengde   B   = %i",tallB);
-AUB = tall+tall2;
-printf("\nSvar mengde A U B = %i\n",AUB);
+    printf("\nSvar mengde   A   = %i",tallA);
+    printf("\nSvar mengde   B   = %i",tallB);
+    AUB = tall+tall2;
+    printf("\nSvar mengde A U B = %i\n",AUB);
 
     return 0;
 }
