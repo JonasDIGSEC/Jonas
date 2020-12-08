@@ -1,0 +1,51 @@
+/**
+*
+* -Programmet skal sjekke hvilke heltall tall mellom 1 og 1000 som er
+*  delelige med 3 og 7 uten rest. svaret blir oppgitt i A U B.
+* -kan redigeres utfra endring i oppgave.
+*
+*   @author Jonas
+*/
+
+#include <stdio.h>
+
+/**
+*   Hovedprogram
+*/
+
+int main () {
+
+int tallA = 0;
+int tallB = 0;
+int tall  = 0;
+int tall2 = 0;
+int AUB   = 0;
+
+for (int n = 1000; n > 0; n--){
+        if (n % 3 ==0) {
+         tallA++;
+    }
+}
+
+for (int j = 1000; j > 0; j--){
+        if (j % 7 ==0) {
+         tallB++;
+    }
+}
+
+for (int i = 1000; i > 0; i--){
+        if (i % 3 ==0) {
+         tall++;
+    }
+         else if (i % 7 ==0) {
+            tall2++;
+    }
+}
+
+printf("\nSvar mengde   A   = %i",tallA);
+printf("\nSvar mengde   B   = %i",tallB);
+AUB = tall+tall2;
+printf("\nSvar mengde A U B = %i\n",AUB);
+
+    return 0;
+}
