@@ -1,1 +1,1 @@
-#spesifikk kalkulator i C
+Spesifikk kalkulator i C
